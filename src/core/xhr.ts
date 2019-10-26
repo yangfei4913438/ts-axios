@@ -156,7 +156,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
         }).catch((err)=>{
           console.log(err)
         })
-      }
+      }0,
     }
 
     // 处理response的状态码
