@@ -153,6 +153,8 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
           request.abort()
           // 返回取消说明
           reject(reason)
+        }).catch((err)=>{
+          console.log(err)
         })
       }
     }
