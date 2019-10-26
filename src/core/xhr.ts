@@ -153,10 +153,13 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
           request.abort()
           // 返回取消说明
           reject(reason)
-        }).catch((err)=>{
-          console.log(err)
-        })
-      }0,
+        }).catch(
+          /* istanbul ignore next */
+          () => {
+            // do nothing
+          }
+        )
+      }
     }
 
     // 处理response的状态码
